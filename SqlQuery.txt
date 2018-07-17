@@ -1,0 +1,38 @@
+/*create electricity table */
+create table ElectricityBill (userId int primary key, userName varchar(30), lastReading int, currentReading int,
+units int,price decimal)
+
+
+/*create login table */
+create table LoginUser (userName varchar(30),password varchar(30))
+
+
+/*create insert procedure */
+create procedure SP_InsertRecords_EBC
+@auserId int,
+@auserName varchar(30),
+@alastReading int,
+@acurrentReading int,
+@aunits int,
+@aprice decimal
+as
+Insert into ElectricityBill(userId,userName,lastReading,currentReading,units,price) 
+values (@auserId,@auserName,@alastReading,@acurrentReading,@aunits,@aprice)
+return 0
+
+
+/*create serach procedure */
+create procedure SP_SearchRecord_EBC
+@auserId int
+as
+Select userId,userName,lastReading,currentReading,units,price from ElectricityBill where userId=@auserId
+return 0
+
+
+/*create validate login procedure */
+create procedure SP_ValidateLogin_EBC
+@auserName varchar(30),
+@apassword varchar(30)
+as
+Select userName from LoginUser where userName = @auserName and password = @apassword
+return 0
