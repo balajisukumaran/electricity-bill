@@ -2,7 +2,7 @@
 
 Electricity Bill calculator web application
 
-A simple web application which I created as part of Capgemini training to practice my ASP.Net skill
+A simple web application with layered architecture and proper coding standards which I created as part of Capgemini training to practice my ASP.Net skill
 
 Languages Used:
 HTML
