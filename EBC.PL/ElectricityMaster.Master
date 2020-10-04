@@ -58,11 +58,6 @@
                     <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
                 </td>
             </tr>
-            <tr>
-                <td style="background-color:deepskyblue;color:white;font-size:18px;font-weight:400">
-                    &copy; CopyRight. All Rights Reserved. 2018
-                </td>
-            </tr>
         </table>
     </div>
     </form>
